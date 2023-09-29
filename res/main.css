@@ -8,15 +8,15 @@ body {
 }
 
 .pink-links a {
-  color: #ff65f7
+  color: #ff65f7;
 }
 
 .pink-links a:hover {
-  color: #e454fa
+  color: #e454fa;
 }
 
 .pink-links a:visited {
-  color: #ff9ffa
+  color: #ff9ffa;
 }
 
 #options {
@@ -44,7 +44,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 24px 0
+  padding: 24px 0;
 }
 
 .tp-titlebar .tp-close-icon {
@@ -69,7 +69,7 @@ body {
   font-weight: 600;
   margin-left: 10px;
   text-align: left;
-  flex-grow: 1
+  flex-grow: 1;
 }
 
 .tp-content {

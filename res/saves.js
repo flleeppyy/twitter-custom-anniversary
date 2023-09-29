@@ -3,19 +3,19 @@ function resetSaves() {
   saves.push({
     name: "Default",
     data: {
-      title: document.getElementById("title").placeholder,
-      message: document.getElementById("message").placeholder,
-      text: document.getElementById("text").placeholder,
-      action: document.getElementById("action").placeholder,
-      image_attachment: document.getElementById("image_attachment").placeholder,
-    }
+      title: document.querySelector("#title").placeholder,
+      message: document.querySelector("#message").placeholder,
+      text: document.querySelector("#text").placeholder,
+      action: document.querySelector("#action").placeholder,
+      image_attachment: document.querySelector("#image_attachment").placeholder,
+    },
   });
 
   localStorage.setItem("saves", saves);
 }
 
 if (!localStorage.getItem("saves")) {
-  resetSaves(); 
+  resetSaves();
 }
 
 function saveSave(name) {
@@ -33,21 +33,21 @@ function saveSave(name) {
   }
 
   // If there are any duplicates, delete them
-  saves.forEach((save, index) => {
+  for (const [index, save] of saves.entries()) {
     if (save.name === name) {
       saves.splice(index, 1);
     }
-  });
+  }
 
   saves.push({
     name: name,
     data: {
-      title: document.getElementById("title").value,
-      message: document.getElementById("message").value,
-      text: document.getElementById("text").value,
-      action: document.getElementById("action").value,
-      image_attachment: document.getElementById("image_attachment").value,
-    }
+      title: document.querySelector("#title").value,
+      message: document.querySelector("#message").value,
+      text: document.querySelector("#text").value,
+      action: document.querySelector("#action").value,
+      image_attachment: document.querySelector("#image_attachment").value,
+    },
   });
 }
 
@@ -57,30 +57,30 @@ function loadSave(name) {
   }
   /**
    * @type {Array<{name: string, data: {title: string, message: string, text: string, action: string, image_attachment: string}}>}
-  */
+   */
   let saves = localStorage.getItem("saves");
 
   if (!saves) {
     resetSaves();
   }
 
-  saves = saves.filter(e => e.name === name);
+  saves = saves.filter((e) => e.name === name);
   let save;
   if (save.length > 1) {
     console.warn("Multiple saves with the same name. Choosing first one.");
     // remove all but the first one
     save = save.slice(1);
-
-  } 
+  }
   if (save.length === 0) {
-    return null;
+    return;
   }
 
   const data = save[0].data;
-  document.getElementById("title").value = data.title;
-  document.getElementById("message").value = data.message;
-  document.getElementById("text").value = data.text;
-  document.getElementById("action").value = data.action;
-  document.getElementById("image_attachment").value = data.image_attachment;
+  document.querySelector("#title").value = data.title;
+  document.querySelector("#message").value = data.message;
+  document.querySelector("#text").value = data.text;
+  document.querySelector("#action").value = data.action;
+  document.querySelector("#image_attachment").value = data.image_attachment;
+  // eslint-disable-next-line no-undef
   updatePreview();
 }

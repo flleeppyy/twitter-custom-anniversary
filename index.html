@@ -1,131 +1,212 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Twitter Custom Anniversary Creator</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-  <link href="res/main.css" rel="stylesheet">
-</head>
-<body>
-  <div id="main-container" class="container-fluid">
-    <div class="text-center">
-      <div class="row justify-content-md-center">
-        <h1>Twitter Custom Anniversary Creator</h1>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Twitter Custom Anniversary Creator</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <link href="res/main.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div id="main-container" class="container-fluid">
+      <div class="text-center">
+        <div class="row justify-content-md-center">
+          <h1>Twitter Custom Anniversary Creator</h1>
+        </div>
+        <p class="pink-links">
+          Created by
+          <a href="https://fleepy.tv" alt="Page Creator">@flleeppyy</a
+          ><br />Inspired by
+          <a href="https://adryd.com" alt="Inspiration">@_adryd</a>
+        </p>
       </div>
-      <p class="pink-links">
-        Created by <a href="https://fleepy.tv" alt="Page Creator">@flleeppyy</a><br>Inspired by <a href="https://adryd.com" alt="Inspiration">@_adryd</a>
-      </p>
-    </div>
-    <hr>
-    <div id="sub-main-container" class="d-flex w-100 container-fluid justify-content-evenly flex-row flex-wrap align-items-center">
-      <form id="options" class="container m-0">
-        <div class="row">
-          <div class="col-sm-12">
-            <div class="form-group">
-              <label for="title">Title</label>
-              <input type="text" class="form-control" id="title" placeholder="Happy Twitter Anniversary">
+      <hr />
+      <div
+        id="sub-main-container"
+        class="d-flex w-100 container-fluid justify-content-evenly flex-row flex-wrap align-items-center"
+      >
+        <form id="options" class="container m-0">
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="form-group">
+                <label for="title">Title</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="title"
+                  placeholder="Happy Twitter Anniversary"
+                />
+              </div>
             </div>
           </div>
-        </div>
-        <div class="row">
-          <div class="col-sm-12">
-            <div class="form-group">
-              <label for="message">Text Description</label>
-              <input type="text" class="form-control" id="message" placeholder="You joined 5 years ago today! Share the big day with others in your Twitter community.">
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="form-group">
+                <label for="message">Text Description</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="message"
+                  placeholder="You joined 5 years ago today! Share the big day with others in your Twitter community."
+                />
+              </div>
             </div>
           </div>
-        </div>
-        <div class="row">
-          <div class="col-sm-12">
-            <div class="form-group">
-              <label for="action">Action Button Title</label>
-              <input type="text" class="form-control" id="action" placeholder="Celebrate with a Tweet">
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="form-group">
+                <label for="action">Action Button Title</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="action"
+                  placeholder="Celebrate with a Tweet"
+                />
+              </div>
             </div>
           </div>
-        </div>
-        <div class="row">
-          <div class="col-sm-12">
-            <div class="form-group">
-              <label for="text">Tweet Content</label>
-              <input type="text" class="form-control" id="text" placeholder="Do you remember when you joined Twitter? I do! #MyTwitterAnniversary">
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="form-group">
+                <label for="text">Tweet Content</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="text"
+                  placeholder="Do you remember when you joined Twitter? I do! #MyTwitterAnniversary"
+                />
+              </div>
             </div>
           </div>
-        </div>
-        <div class="row">
-          <div class="col-sm-12">
-            <div class="form-group">
-              <label for="image_attachment">Image Attachment</label>
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="form-group">
+                <label for="image_attachment">Image Attachment</label>
 
-              <input type="url" class="form-control" id="image_attachment" placeholder="https://ton.twimg.com/ntab_public/twitterversary/year5.jpg">
+                <input
+                  type="url"
+                  class="form-control"
+                  id="image_attachment"
+                  placeholder="https://ton.twimg.com/ntab_public/twitterversary/year5.jpg"
+                />
+              </div>
             </div>
           </div>
-        </div>
-        <div class="row">
-          <div class="col-sm-12">
-            <div class="form-group">
-              <label for="predefined_image">Predefined Images</label>
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="form-group">
+                <label for="predefined_image">Predefined Images</label>
 
-              <select class="form-control" id="predefined_image">
-                <option value="">None</option>
-              </select>
+                <select class="form-control" id="predefined_image">
+                  <option value="">None</option>
+                </select>
+              </div>
             </div>
           </div>
-        </div>
-        <hr>
-        <div class="row">
+          <hr />
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="form-group">
+                <span class="text-center m-auto">Generated Link</span>
+                <div
+                  class="d-flex container-fluid flex-flow flex-row w-100 justify-content-end p-0 gap-2"
+                >
+                  <input
+                    id="result"
+                    type="text"
+                    class="form-control"
+                    readonly
+                    value="https://twitter.com/i/notifications/anniversary?title=Happy%20Twitter%20anniversary&message=You%20joined%205%20years%20ago%20today!%20Share%20the%20big%20day%20with%20others%20in%20your%20Twitter%20community.&action=Celebrate%20with%20a%20Tweet&text=Do%20you%20remember%20when%20you%20joined%20Twitter%3F%20I%20do!%20%23MyTwitterAnniversary&image_attachment=https%3A%2F%2Fton.twimg.com%2Fntab_public%2Ftwitterversary%2Fyear5.jpg&image_width=1920&image_height=1080"
+                  />
+                  <button
+                    type="button"
+                    class="btn btn-secondary"
+                    onclick="navigator.clipboard.writeText(document.querySelector('#result').value)"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      class="bi bi-clipboard"
+                      viewBox="0 0 16 16"
+                      style="--darkreader-inline-fill: currentColor"
+                      data-darkreader-inline-fill=""
+                    >
+                      <path
+                        d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"
+                      ></path>
+                      <path
+                        d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"
+                      ></path>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- <div class="row">
           <div class="col-sm-12">
-            <div class="form-group">
-              <span class="text-center m-auto">Generated Link</span>
-              <div class="d-flex container-fluid flex-flow flex-row w-100 justify-content-end p-0 gap-2">
-                <input id="result" type="text" class="form-control" readonly value="https://twitter.com/i/notifications/anniversary?title=Happy%20Twitter%20anniversary&message=You%20joined%205%20years%20ago%20today!%20Share%20the%20big%20day%20with%20others%20in%20your%20Twitter%20community.&action=Celebrate%20with%20a%20Tweet&text=Do%20you%20remember%20when%20you%20joined%20Twitter%3F%20I%20do!%20%23MyTwitterAnniversary&image_attachment=https%3A%2F%2Fton.twimg.com%2Fntab_public%2Ftwitterversary%2Fyear5.jpg&image_width=1920&image_height=1080">
-                <button type="button" class="btn btn-secondary" onclick="navigator.clipboard.writeText(document.querySelector('#result').value)">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16" style="--darkreader-inline-fill: currentColor;" data-darkreader-inline-fill="">
-    <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"></path>
-    <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"></path>
-                  </svg>
+            <button type="button" class="btn btn-primary" id="generate">Generate</button>
+          </div>
+        </div> -->
+        </form>
+        <!-- Twitter Preview -->
+        <hr />
+        <div class="tp-container">
+          <div class="tp-titlebar">
+            <div class="tp-close-icon">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="feather feather-x"
+              >
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+              </svg>
+            </div>
+            <div class="tp-title">
+              <span id="tptitle">Happy Twitter Anniversary</span>
+            </div>
+          </div>
+          <div class="tp-content">
+            <div
+              id="tpimage"
+              style="
+                background-image: url(&quot;https://ton.twimg.com/ntab_public/twitterversary/year5.jpg&quot;);
+              "
+            ></div>
+            <div class="tp-main">
+              <div class="tp-description">
+                <h3 id="tpdescription">
+                  Do you remember when you joined twitter? I do!
+                </h3>
+              </div>
+              <div class="tp-action">
+                <button>
+                  <span id="tpaction">Celebrate with a tweet</span>
                 </button>
               </div>
             </div>
           </div>
         </div>
-        
-        <!-- <div class="row">
-          <div class="col-sm-12">
-            <button type="button" class="btn btn-primary" id="generate">Generate</button>
-          </div>
-        </div> -->
-      </form>
-      <!-- Twitter Preview -->
-      <hr>
-      <div class="tp-container">
-        <div class="tp-titlebar">
-          <div class="tp-close-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
-          </div>
-          <div class="tp-title">
-            <span id="tptitle">Happy Twitter Anniversary</span>
-          </div>
-        </div>
-        <div class="tp-content">
-          <div id="tpimage" style="background-image: url('https://ton.twimg.com/ntab_public/twitterversary/year5.jpg')">
-          </div>
-          <div class="tp-main">
-            <div class="tp-description">
-              <h3 id="tpdescription">Do you remember when you joined twitter? I do!</h3>
-            </div>
-            <div class="tp-action">
-              <button>
-                <span id="tpaction">Celebrate with a tweet</span>
-              </button>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
-  </div>
-  <script src="res/index.js"></script>
-  <script src="res/saves.js"></script>
-</body>
+    <script src="res/index.js"></script>
+    <script src="res/saves.js"></script>
+  </body>
 </html>

@@ -1,8 +1,19 @@
 {
+  "name": "twitter-custom-anniversary",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "lint": "prettier --write '**/*.{js,css,html}' && eslint **/*.{js,html}"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
   "devDependencies": {
     "@espimarisa/eslint-config": "^4.1.6",
     "eslint": "^8.50.0",
     "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-html": "^7.1.0",
     "eslint-plugin-import": "^2.28.1",
     "eslint-plugin-n": "^16.1.0",
     "eslint-plugin-prettier": "^5.0.0",
