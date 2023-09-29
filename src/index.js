@@ -1,8 +1,61 @@
-// https://twitter.com/i/notifications/anniversary
-//  ?title=Happy%20Twitter%20anniversary
-//  &message=You%20joined%205%20years%20ago%20today!%20Share%20the%20big%20day%20with%20others%20in%20your%20Twitter%20community.
-//  &action=Celebrate%20with%20a%20Tweet
-//  &text=Do%20you%20remember%20when%20you%20joined%20Twitter%3F%20I%20do!%20%23MyTwitterAnniversary
-//  &image_attachment=https%3A%2F%2Fton.twimg.com%2Fntab_public%2Ftwitterversary%2Fyear5.jpg
-//  &image_width=1920&image_height=1080
+document.getElementById("title").oninput = function() {
+  document.getElementById("tptitle").innerHTML = this.value;
+  generate();
+};
 
+document.getElementById("text").oninput = function() {
+  document.getElementById("tpdescription").innerHTML = this.value;
+  generate();
+};
+
+
+document.getElementById("action").oninput = function() {
+  document.getElementById("tpaction").innerHTML = this.value;
+  generate();
+};
+
+// On image update
+document.getElementById("image_attachment").onchange = function() {
+  console.log(this.value)
+  // make sure the pattern matches before we fetch
+  if (new RegExp(/^https:\/\/(?:[\w-]+.){0,1}(?:twitter\.com|x\.com|twimg\.com|t.co)/ig).test(this.value)) {
+    console.log("meowmeow");
+    document.getElementById("tpimage").style.backgroundImage = "";
+    fetch(this.value)
+    .then(response => response.blob())
+    .then(blob => {
+      const objectURL = URL.createObjectURL(blob);
+      console.log(objectURL);
+      document.getElementById("tpimage").style.backgroundImage = "url('" + objectURL + "')";
+    });
+    generate();
+  }
+};
+
+function generate() {
+  const queryParams = new URLSearchParams();
+  queryParams.append("title", document.getElementById("title").value);
+  queryParams.append("message", document.getElementById("message").value);
+  queryParams.append("action", document.getElementById("action").value);
+  queryParams.append("text", document.getElementById("text").value);
+  queryParams.append("image_attachment", document.getElementById("image_attachment").value);
+
+  document.getElementById("result").value =
+   `https://twitter.com/i/notifications/anniversary?${queryParams.toString()}`;
+}
+
+function updatePreview() {
+  document.getElementById("tptitle").innerHTML = document.getElementById("title").value || document.getElementById("title").placeholder;
+  document.getElementById("tpdescription").innerHTML = document.getElementById("text").value || document.getElementById("text").placeholder;
+  document.getElementById("tpaction").innerHTML = document.getElementById("action").value || document.getElementById("action").placeholder;
+  document.getElementById("tpimage").style.backgroundImage = document.getElementById("image_attachment").value || document.getElementById("image_attachment").placeholder;
+}
+
+function setPlaceholdersAsValues() {
+  document.getElementById("title").value = document.getElementById("tptitle").placeholder;
+  document.getElementById("text").value = document.getElementById("tpdescription").placeholder;
+  document.getElementById("action").value = document.getElementById("tpaction").placeholder;
+  document.getElementById("tpimage").style.backgroundImage = document.getElementById("image_attachment").placeholder;
+}
+
+updatePreview();
