@@ -24,14 +24,6 @@ body {
   margin: 0 auto;
 }
 
-#sub-main-container {
-  /* display: flex; */
-  /* flex-direction: column; */
-  /* align-items: center; */
-  /* justify-content: center; */
-
-}
-
 .tp-container {
   position: relative;
   /* width: 80vw; */
